@@ -140,30 +140,30 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet deleniti blanditiis unde dolorum
                     consectetur quod praesentium, minus rerum a impedit.</p>
             </section>
-            <form class="form">
+            <form action="https://http-echo-server.azurewebsites.net" method="post" class="form">
                 <div class="form-top">
                     <div class="field">
-                        <label for="email">Förnamn</label>
-                        <input type="email" placeholder="Erik" required>
+                        <label for="firstName">Förnamn</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="Erik" required>
                     </div>
                     <div class="field">
-                        <label for="email">Efternamn</label>
-                        <input type="email" placeholder="Jonsson" required>
+                        <label for="lastName">Efternamn</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Jonsson" required>
                     </div>
                 </div>
                 <div class="form-bottom">
                     <div class="field">
-                        <label for="email">Ålder</label>
-                        <input type="email" placeholder="23" required>
+                        <label for="age">Ålder</label>
+                        <input id="age" name="age" type="number" placeholder="23" min="18" max="120" required>
                     </div>
                     <div class="field">
                         <label for="email">Email</label>
-                        <input type="email" placeholder="Din@email.com" required>
+                        <input id="email" name="email" type="email" placeholder="Din@email.com" required>
                     </div>
                 </div>
                 <div class="checkbox-wrapper">
-                    <input id="terms" type="checkbox" required>
-                    <label for="terms">Jag vill få nyhetsbev från Zoo Palatset</label>
+                    <input id="terms" name="terms" type="checkbox" required>
+                    <label for="terms">Jag vill få nyhetsbrev från Zoo Palatset</label>
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
