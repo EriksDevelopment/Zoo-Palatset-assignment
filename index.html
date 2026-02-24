@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZOO PALATSET</title>
+    <title>Zoo Palatset</title>
 </head>
 
 <body>
@@ -18,17 +18,23 @@
                 </div>
             </div>
             <div class="nav-center">
-                <img class="logo" src="/images/logo.png" alt="Zoo-Palatset-Logo">
+                <a href="#"><img class="logo" src="/images/logo.png" alt="Zoo-Palatset-Logo"></a>
             </div>
             <div class="nav-right">
-                <a class="link" href="#">Hem</a>
                 <a class="link" href="#">Djur</a>
+                <a class="link" href="#">Restauranger</a>
                 <a class="link" href="#">Utforska</a>
                 <p class="search">
                     <img class="search-icon" src="/images/search-icon.png">
                     Sök
                 </p>
             </div>
+        </nav>
+
+        <nav class="navbar-lower">
+            <a class="link-lower" href="#">Biljetter</a>
+            <a class="link-lower" href="#">Nyhetsbrev</a>
+            <a class="link-lower" href="#location">Hitta hit</a>
         </nav>
     </header>
 
@@ -52,6 +58,115 @@
                 <h2>Idag, 11:00 - 17:00</h2>
                 <a href="#">Läs mer</a>
             </article>
+        </section>
+
+        <section class="animal-section">
+            <h1>Våra djur</h1>
+            <div class="animal-wrapper">
+                <div class="top-row">
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/tiger.png" alt="tiger-picture">
+                            Tigrar
+                        </a>
+                    </article>
+
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/elephant.png" alt="elephant-picture">
+                            Elefanter
+                        </a>
+                    </article>
+
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/rodjur.png" alt="rodjur-picture">
+                            Rådjur
+                        </a>
+                    </article>
+
+                </div>
+                <div class="bottom-row">
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/monkey.png" alt="monkey-picture">
+                            Apor
+                        </a>
+                    </article>
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/panda.png" alt="panda-picture">
+                            Pandor
+                        </a>
+                    </article>
+                    <article class="animal-card">
+                        <a href="#">
+                            <img src="/images/parrot.png" alt="parrot-picture">
+                            Papegoja
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section" id="location">
+            <section class="location-info">
+                <div class="title-wrap">
+                    <img src="/images/map-icon.png" class="map-icon" alt="map-icon">
+                    <h1>Hitta oss!</h1>
+                </div>
+                <div class="location-row">
+                    <img class="ping-icon" src="/images/ping-icon.png" alt="ping-icon">
+                    <a href="https://www.google.com/maps/place/R%C3%A5djursv%C3%A4gen+22,+302+73+Halmstad/@56.6527931,12.73396,17z/data=!3m1!4b1!4m6!3m5!1s0x4651bda2ba096ce9:0x2ba10ff994d11cb4!8m2!3d56.6527931!4d12.7365349!16s%2Fg%2F11vzrmnp9t!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank">Rådjursvägen
+                        22, 302 73 Halmstad</a>
+                </div>
+                <p>Mån - Fre, 11:00 - 19:00</p>
+                <p>Lör - Sön, 11:00 - 15:00</p>
+
+            </section>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28709.895835481897!2d12.738567221372453!3d56.65798873864822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1771953466139!5m2!1ssv!2sse"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <section class="newsletter-info">
+                <h1>Prenumerera på Zoo Palatsets nyhetsbrev</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet deleniti blanditiis unde dolorum
+                    consectetur quod praesentium, minus rerum a impedit.</p>
+            </section>
+            <form class="form">
+                <div class="form-top">
+                    <div class="field">
+                        <label for="email">Förnamn</label>
+                        <input type="email" placeholder="Erik" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Efternamn</label>
+                        <input type="email" placeholder="Jonsson" required>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <div class="field">
+                        <label for="email">Ålder</label>
+                        <input type="email" placeholder="23" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Din@email.com" required>
+                    </div>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input id="terms" type="checkbox" required>
+                    <label for="terms">Jag vill få nyhetsbev från Zoo Palatset</label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
         </section>
     </main>
 

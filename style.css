@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #1b5240;
+    --secondary-color: #143d2f;
+    --lower-navbar-color: white;
+    --text-color: white;
+    --footer-color: #12362a;
+}
+
 html,
 body {
     padding: 0;
@@ -9,17 +17,25 @@ body {
 }
 
 body {
+    background-color: #1b5240;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
-    background-color: #1b5240;
+    background-color: var(--primary-color);
+    margin-top: 70px;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     padding: 0 50px;
+    background-color: var(--primary-color);
 
 }
 
@@ -51,7 +67,7 @@ header {
 .country-text {
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--text-color);
     font-weight: bold;
     gap: 10px;
     text-decoration: none;
@@ -71,7 +87,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .search {
@@ -79,11 +95,12 @@ header {
     align-items: center;
     padding-left: 50px;
     gap: 15px;
-    color: white;
+    color: var(--text-color);
     font-weight: bold;
     background-color: transparent;
     padding: 25px;
     margin: 0;
+    cursor: pointer;
 }
 
 .search-icon {
@@ -92,7 +109,7 @@ header {
 }
 
 .link {
-    color: white;
+    color: var(--text-color);
     font-weight: bold;
     text-decoration: none;
     background-color: transparent;
@@ -103,6 +120,29 @@ header {
 .search:hover,
 .country-select:hover {
     background-color: #226a52;
+}
+
+
+.navbar-lower {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--lower-navbar-color);
+    padding: 0 50px;
+}
+
+.link-lower {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 25px;
+    background-color: transparent;
+}
+
+.link-lower:hover {
+    background-color: rgb(38, 38, 38);
+    color: var(--text-color);
 }
 
 
@@ -119,18 +159,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1b5240;
+    background-color: var(--primary-color);
     gap: 40px;
     padding: 50px;
 }
 
 .open-hour-card {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(246, 246, 246);
     padding: 20px 30px;
     border-radius: 15px;
     min-width: 300px;
     min-height: 210px;
-    border: 4px dashed #1b5240;
+    border: 4px dashed var(--primary-color);
 }
 
 .open-hour-card h1 {
@@ -147,8 +187,217 @@ header {
     font-weight: bold;
 }
 
+.animal-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 150px;
+    background-color: var(--text-color);
+}
+
+.animal-section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 40px;
+}
+
+.animal-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.top-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 40px;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.animal-card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.animal-card img {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.animal-card img:hover {
+    transform: scale(1.05);
+}
+
+.animal-card a {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.map-section {
+    display: flex;
+    padding: 50px 150px;
+    background-color: var(--secondary-color);
+}
+
+.title-wrap {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.map-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.title-wrap h1 {
+    margin: 0;
+    font-size: 40px;
+    color: var(--text-color);
+    padding-bottom: 30px;
+}
+
+.location-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.ping-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.location-row a {
+    color: var(--text-color);
+    padding-top: 5px;
+}
+
+.map {
+    margin-left: auto;
+    padding-bottom: 10px;
+}
+
+.map iframe {
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.location-info p {
+    color: white;
+}
+
+.newsletter-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color);
+    padding: 50px 100px;
+    gap: 80px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 20px;
+}
+
+.form-top,
+.form-bottom {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.form input {
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    margin-top: 8px;
+    background-color: #f8f8f8;
+}
+
+.form button {
+    margin-left: auto;
+    border: none;
+    padding: 10px 14px;
+    width: 150px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#terms {
+    cursor: pointer;
+}
+
+.checkbox-wrapper label {
+    font-size: 12px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.newsletter-info {
+    width: 700px;
+    margin-bottom: auto;
+}
+
+.newsletter-info h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.newsletter-info p {
+    margin-top: 30px;
+    width: 600px;
+    color: var(--primary-color);
+}
+
 .footer {
     padding: 50px 40px;
-    background-color: #12362a;
+    background-color: var(--footer-color);
     color: rgb(223, 223, 223);
 }
