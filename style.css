@@ -104,3 +104,51 @@ header {
 .country-select:hover {
     background-color: #226a52;
 }
+
+
+.hero-section {
+    height: 60vh;
+    background-image: url(/images/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.open-hour-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b5240;
+    gap: 40px;
+    padding: 50px;
+}
+
+.open-hour-card {
+    background-color: rgb(241, 241, 241);
+    padding: 20px 30px;
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 210px;
+    border: 4px dashed #1b5240;
+}
+
+.open-hour-card h1 {
+    text-align: left;
+    font-weight: 400;
+}
+
+.open-hour-card h2 {
+    font-weight: 200;
+}
+
+.open-hour-card a {
+    color: black;
+    font-weight: bold;
+}
+
+.footer {
+    padding: 50px 40px;
+    background-color: #12362a;
+    color: rgb(223, 223, 223);
+}
