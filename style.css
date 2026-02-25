@@ -172,7 +172,7 @@ header.scrolled .logo {
 
 .hero-section {
     height: 60vh;
-    background-image: url(./images/hero.png);
+    background-image: url("./images/hero.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
