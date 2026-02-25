@@ -7,7 +7,8 @@
     --secondary-color: #143d2f;
     --lower-navbar-color: white;
     --text-color: white;
-    --footer-color: #12362a;
+    --footer-color: #0d261e;
+    --third-color: rgb(198, 125, 125);
 }
 
 html,
@@ -24,7 +25,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .navbar {
@@ -55,8 +56,9 @@ header {
     display: flex;
     align-items: center;
     background-color: transparent;
-    padding: 25px;
+    padding: 18px 25px;
     margin: 0;
+    transition: background-color 0.3s ease;
 }
 
 .country {
@@ -74,21 +76,24 @@ header {
     text-decoration: none;
 }
 
-.nav-center {
-    display: flex;
-    justify-content: center;
+.logo {
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.logo {
-    width: 250px;
-    height: 50px;
+header.scrolled .logo {
+    opacity: 1;
+    transform: translateY(0);
 }
+
 
 .nav-right {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
 }
 
 .search {
@@ -99,9 +104,10 @@ header {
     color: var(--text-color);
     font-weight: bold;
     background-color: transparent;
-    padding: 25px;
+    padding: 18px 25px;
     margin: 0;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .search-icon {
@@ -114,7 +120,8 @@ header {
     font-weight: bold;
     text-decoration: none;
     background-color: transparent;
-    padding: 25px;
+    padding: 18px 25px;
+    transition: background-color 0.3s ease;
 }
 
 .link:hover,
@@ -124,6 +131,7 @@ header {
 }
 
 .navbar-lower {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -131,17 +139,33 @@ header {
     padding: 0 50px;
 }
 
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-lower {
+    width: 350px;
+    height: auto;
+}
+
+header.scrolled .logo {
+    width: 200px;
+}
+
 .link-lower {
     color: black;
-    font-size: 20px;
+    font-size: 23px;
     text-decoration: none;
     font-weight: 600;
     padding: 25px;
     background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .link-lower:hover {
-    background-color: rgb(38, 38, 38);
+    background-color: var(--third-color);
     color: var(--text-color);
 }
 
@@ -149,9 +173,9 @@ header {
 .hero-section {
     height: 60vh;
     background-image: url(/images/hero.png);
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -159,13 +183,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     gap: 40px;
     padding: 50px;
 }
 
 .open-hour-card {
     background-color: rgb(246, 246, 246);
+    background-color: var(--text-color);
     padding: 20px 30px;
     border-radius: 15px;
     min-width: 300px;
@@ -194,6 +219,8 @@ header {
     justify-content: center;
     padding: 50px 150px;
     background-color: var(--text-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .animal-section h1 {
@@ -254,6 +281,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 50px 150px;
+    background-color: var(--secondary-color);
 }
 
 .explore-wrapper {
@@ -336,10 +364,14 @@ header {
     border-radius: 50%;
 }
 
+.table a {
+    color: black;
+}
+
 
 .map-section {
     display: flex;
-    padding: 50px 150px;
+    padding: 100px 150px;
     background-color: var(--secondary-color);
 }
 
@@ -444,14 +476,16 @@ header {
     width: 150px;
     border-radius: 4px;
     font-size: 16px;
-    color: white;
+    color: black;
     font-weight: bold;
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .form button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .checkbox-wrapper {

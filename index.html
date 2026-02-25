@@ -18,10 +18,10 @@
                 </div>
             </div>
             <div class="nav-center">
-                <a href="#"><img class="logo" src="/images/logo.png" alt="Zoo-Palatset-Logo"></a>
+                <a href="#"><img class="logo" src="/images/logo-light.png" alt="Zoo-Palatset-Logo"></a>
             </div>
             <div class="nav-right">
-                <a class="link" href="#">Djur</a>
+                <a class="link" href="#animals">Djur</a>
                 <a class="link" href="#">Restauranger</a>
                 <a class="link" href="#">Utforska</a>
                 <p class="search">
@@ -32,9 +32,17 @@
         </nav>
 
         <nav class="navbar-lower">
-            <a class="link-lower" href="#">Biljetter</a>
-            <a class="link-lower" href="#">Nyhetsbrev</a>
-            <a class="link-lower" href="#location">Hitta hit</a>
+            <div class="nav-left">
+                <a class="link-lower" href="#">Planera ditt besök</a>
+                <a class="link-lower" href="#">Biljetter</a>
+            </div>
+            <div class="nav-center">
+                <a href="#"><img class="logo-lower" src="/images/logo.png" alt="Zoo-Palatset-Logo"></a>
+            </div>
+            <div class="nav-right">
+                <a class="link-lower" href="#location">Hitta hit</a>
+                <a class="link-lower" href="#newsletter">Nyhetsbrev</a>
+            </div>
         </nav>
     </header>
 
@@ -60,7 +68,7 @@
             </article>
         </section>
 
-        <section class="animal-section">
+        <section class="animal-section" id="animals">
             <h1>Våra djur</h1>
             <div class="animal-wrapper">
                 <div class="top-row">
@@ -102,7 +110,7 @@
                     <article class="animal-card">
                         <a href="#">
                             <img src="/images/parrot.png" alt="parrot-picture">
-                            Papegoja
+                            Papegojor
                         </a>
                     </article>
                 </div>
@@ -155,39 +163,40 @@
                 <tbody>
                     <tr>
                         <td>Frank</td>
-                        <td><img src="/images/parrot.png"></td>
+                        <td><img src="/images/parrot.png" alt="parrot-img"></td>
                         <td>1 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://sv.wikipedia.org/wiki/Papegojf%C3%A5glar" target="_blank">Wikipedia</a>
+                        </td>
                     </tr>
                     <tr>
                         <td>Jonas</td>
-                        <td><img src="/images/elephant.png"></td>
+                        <td><img src="/images/elephant.png" alt="elephant-img"></td>
                         <td>1000 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://sv.wikipedia.org/wiki/Elefanter" target="_blank">Wikipedia</a></td>
                     </tr>
                     <tr>
                         <td>Gunnar</td>
-                        <td><img src="/images/panda.png"></td>
+                        <td><img src="/images/panda.png" alt="panda-img"></td>
                         <td>130 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://sv.wikipedia.org/wiki/J%C3%A4ttepanda" target="_blank">Wikipedia</a></td>
                     </tr>
                     <tr>
                         <td>Petter</td>
-                        <td><img src="/images/monkey.png"></td>
+                        <td><img src="/images/monkey.png" alt="monkey-img"></td>
                         <td>2 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://en.wikipedia.org/wiki/Monkey" target="_blank">Wikipedia</a></td>
                     </tr>
                     <tr>
                         <td>Bob</td>
-                        <td><img src="/images/rodjur.png"></td>
+                        <td><img src="/images/rodjur.png" alt="rodjur-img"></td>
                         <td>45 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://sv.wikipedia.org/wiki/R%C3%A5djur" target="_blank">Wikipedia</a></td>
                     </tr>
                     <tr>
                         <td>Billy</td>
-                        <td><img src="/images/tiger.png"></td>
+                        <td><img src="/images/tiger.png" alt="tiger-img"></td>
                         <td>85 kg</td>
-                        <td><a href="">Wikipedia</a></td>
+                        <td><a href="https://sv.wikipedia.org/wiki/Tiger" target="_blank">Wikipedia</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -218,7 +227,7 @@
             </div>
         </section>
 
-        <section class="newsletter-section">
+        <section class="newsletter-section" id="newsletter">
             <section class="newsletter-info">
                 <h1>Prenumerera på Zoo Palatsets nyhetsbrev</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet deleniti blanditiis unde dolorum
@@ -258,5 +267,17 @@
         2026 &copy; ZOO PALATSET
     </footer>
 </body>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
 
 </html>
