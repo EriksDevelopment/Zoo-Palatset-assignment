@@ -198,12 +198,12 @@ header.scrolled .logo {
     border: 4px dashed var(--primary-color);
 }
 
-.open-hour-card h1 {
+.open-hour-card h2 {
     text-align: left;
     font-weight: 400;
 }
 
-.open-hour-card h2 {
+.open-hour-card h3 {
     font-weight: 200;
 }
 
@@ -307,13 +307,13 @@ header.scrolled .logo {
     height: 60px;
 }
 
-.explore-title-wrapper h1 {
+.explore-title-wrapper h2 {
     font-size: 25px;
     color: var(--text-color);
     text-align: center;
 }
 
-.explore-info-wrapper h2 {
+.explore-info-wrapper p {
     font-size: 16px;
     width: 300px;
     text-align: center;
@@ -386,7 +386,7 @@ header.scrolled .logo {
     height: 50px;
 }
 
-.title-wrap h1 {
+.title-wrap h2 {
     margin: 0;
     font-size: 40px;
     color: var(--text-color);
@@ -509,7 +509,7 @@ header.scrolled .logo {
     margin-bottom: auto;
 }
 
-.newsletter-info h1 {
+.newsletter-info h2 {
     color: var(--primary-color);
     margin: 0;
 }
